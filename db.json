@@ -1,0 +1,67 @@
+{
+  "employees": [
+    {
+      "name": "Emily Davis",
+      "email": "emily.davis@example.com",
+      "department": "Human Resources",
+      "gender":"Female",
+      "dateOfJoining": "2019-07-18",
+      "salary": 68000000,
+      "id": "4"
+    },
+    {
+      "id": "5",
+      "name": "David Wilson",
+      "email": "david.wilson@example.com",
+      "gender": "Male",
+      "department": "Engineering",
+      "dateOfJoining": "2018-09-30",
+      "salary": 750000
+    },
+    {
+      "id": "6",
+      "name": "Sophia Martinez",
+      "email": "sophia.martinez@example.com",
+      "gender": "Female",
+      "department": "Sales",
+      "dateOfJoining": "2023-02-05",
+      "salary": 6245830
+    },
+    {
+      "id": "7",
+      "name": "Daniel Brown",
+      "email": "daniel.brown@example.com",
+      "gender": "Male",
+      "department": "IT Support",
+      "dateOfJoining": "2022-06-12",
+      "salary": 600000
+    },
+    {
+      "id": "8",
+      "name": "Olivia Anderson",
+      "email": "olivia.anderson@example.com",
+      "gender": "Female",
+      "department": "Marketing",
+      "dateOfJoining": "2021-08-25",
+      "salary": 6437657
+    },
+    {
+      "id": "9",
+      "name": "William Taylor",
+      "email": "william.taylor@example.com",
+      "gender": "Male",
+      "department": "Engineering",
+      "dateOfJoining": "2017-12-14",
+      "salary": 800000
+    },
+    {
+      "id": "10",
+      "name": "Isabella White",
+      "email": "isabella.white@example.com",
+      "gender": "Female",
+      "department": "Finance",
+      "dateOfJoining": "2019-04-29",
+      "salary": 69760
+    }
+  ]
+}

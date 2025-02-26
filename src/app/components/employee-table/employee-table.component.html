@@ -1,0 +1,29 @@
+<h2>Employee Directory</h2>
+<table border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Department</th>
+        <th>Date of Joining</th>
+        <th>Salary</th>
+        <th>Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.gender }}</td>
+        <td>{{ employee.department }}</td>
+        <td>{{ employee.dateOfJoining }}</td>
+        <td>{{ employee.salary | salaryFormat }}</td>
+        <td>
+          <button (click)="deleteEmployee(employee.id)">Delete</button>
+          <button (click) = "editEmployee(employee.id)">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

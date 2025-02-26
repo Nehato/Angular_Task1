@@ -1,0 +1,63 @@
+
+.employee-table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: linear-gradient(to right, #e3f2fd, #bbdefb);
+}
+
+
+.employee-card {
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+th {
+  background-color: #0d47a1;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+}
+
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+tr:hover {
+  background-color: #e3f2fd;
+  transition: 0.3s ease-in-out;
+}
+
+
+mat-icon {
+  font-size: 24px;
+}
+
+button {
+  margin: 0 5px;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.2);
+}

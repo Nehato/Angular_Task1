@@ -1,0 +1,90 @@
+<div class="form-container">
+    <mat-card class="form-card">
+      <mat-card-title>🌿 Employee Form</mat-card-title>
+      <mat-card-content>
+        <form [formGroup]="employeeForm" (ngSubmit)="submitForm()">
+          
+      
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" placeholder="Enter Name">
+            <mat-icon matSuffix>person</mat-icon>
+            <mat-error *ngIf="employeeForm.get('name')?.hasError('required')">
+              Name is required.
+            </mat-error>
+            <mat-error *ngIf="employeeForm.get('name')?.hasError('pattern')">
+              Only alphabets are allowed.
+            </mat-error>
+          </mat-form-field>
+  
+          
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" type="email" placeholder="Enter Email">
+            <mat-icon matSuffix>email</mat-icon>
+            <mat-error *ngIf="employeeForm.get('email')?.hasError('required')">Email is required</mat-error>
+            <mat-error *ngIf="employeeForm.get('email')?.hasError('email')">Enter a valid email</mat-error>
+          </mat-form-field>
+  
+        
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender">
+              <mat-option value="Male">Male</mat-option>
+              <mat-option value="Female">Female</mat-option>
+              <mat-option value="Other">Other</mat-option>
+            </mat-select>
+            <mat-icon matSuffix>wc</mat-icon>
+            <mat-error *ngIf="employeeForm.get('gender')?.hasError('required')">
+              Please select a gender.
+            </mat-error>
+          </mat-form-field>
+  
+          
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Department</mat-label>
+            <mat-select formControlName="department">
+              <mat-option *ngFor="let dept of departments" [value]="dept">{{ dept }}</mat-option>
+            </mat-select>
+            <mat-icon matSuffix>business</mat-icon>
+            <mat-error *ngIf="employeeForm.get('department')?.hasError('required')">
+              Please select a department.
+            </mat-error>
+          </mat-form-field>
+  
+          
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Joining Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="joiningDate" placeholder="Select Date">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>\
+            <mat-error *ngIf="employeeForm.get('joiningDate')?.hasError('required')">
+              Joining date is required.
+            </mat-error>
+          </mat-form-field>
+  
+          
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Salary</mat-label>
+            <input matInput formControlName="salary" type="number" placeholder="Enter Salary">
+            <mat-icon matSuffix>attach_money</mat-icon>
+            <mat-error *ngIf="employeeForm.get('salary')?.hasError('required')">
+              Salary is required.
+            </mat-error>
+          </mat-form-field>
+  
+          
+          <div class="button-group">
+            <button mat-raised-button color="primary" type="submit" [disabled]="employeeForm.invalid">
+              <mat-icon>check_circle</mat-icon> Submit
+            </button>
+            <button mat-raised-button color="warn" type="button" (click)="resetForm()">
+              <mat-icon>refresh</mat-icon> Reset
+            </button>
+          </div>
+  
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
